@@ -9,13 +9,16 @@ namespace c_sharp_stuff
         static void Main(string[] args)
         {
             // calling by reference (ref & out)
-            //CallByWhat.Call();
+            CallByWhat.Call();
 
             // fizzbuzz iterative
-            FB.DoIterative(100);
+            //FB.DoIterative(100);
 
             // fizzbuzz recursive
-            FB.DoRecursive(1, 100);
+            //FB.DoRecursive(1, 1);
+
+            AbstractVirtualInterfaceObject work = new AbstractVirtualInterfaceObject();
+            work.DoSomething();
         }
     }
 }

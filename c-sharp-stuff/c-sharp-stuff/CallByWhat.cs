@@ -13,8 +13,8 @@ namespace c_sharp_stuff
             Console.ReadKey();
 
             Console.WriteLine("calling by reference (out)");
-            string testOut;
-            Console.WriteLine(CallByOut(out testOut));
+            //string testOut;
+            Console.WriteLine(CallByOut(out string testOut));
             Console.ReadKey();
         }
 

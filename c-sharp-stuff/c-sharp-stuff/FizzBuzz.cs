@@ -12,11 +12,11 @@ namespace c_sharp_stuff
             {
                 return "FizzBuzz";
             }
-            else if (n % 5 == 0)
+            if (n % 5 == 0)
             {
                 return "Buzz";
             }
-            else if (n % 3 == 0)
+            if (n % 3 == 0)
             {
                 return "Fizz";
             }
