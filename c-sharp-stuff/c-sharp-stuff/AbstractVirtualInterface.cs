@@ -46,7 +46,7 @@ namespace c_sharp_stuff
             return x + "optional override base virtual method";
         }
 
-        public string AddIt(string x)
+        public new string AddIt(string x)
         {
             return x + "optional concrete class implementation";
         }
