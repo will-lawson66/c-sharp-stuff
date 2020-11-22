@@ -52,21 +52,31 @@ namespace c_sharp_stuff
 
             Task<Egg> eggsTask = BreakfastAsync.FryEggsAsync(2);
             Task<Bacon> baconTask = BreakfastAsync.FryBaconAsync(3);
-            Task<Toast> toastTask = BreakfastAsync.ToastBreadAsync(2);
 
-            Toast toast = await toastTask;
-            BreakfastAsync.ApplyButter(toast);
-            BreakfastAsync.ApplyJam(toast);
-            Console.WriteLine("toast is ready");
+            //Task<Toast> toastTask = BreakfastAsync.ToastBreadAsync(2);
+            Task<Toast> toastTask = BreakfastAsync.MakeToastWithButterAndJamAsync(2);
+
+            var breakfastTasks = new List<Task> { eggsTask, baconTask, toastTask };
+            while (breakfastTasks.Count > 0)
+            {
+                Task finishedTask = await Task.WhenAny(breakfastTasks);
+                if (finishedTask == eggsTask)
+                {
+                    Console.WriteLine("eggs are ready");
+                }
+                else if (finishedTask == baconTask)
+                {
+                    Console.WriteLine("bacon is ready");
+                }
+                else if (finishedTask == toastTask)
+                {
+                    Console.WriteLine("toast is ready");
+                }
+                breakfastTasks.Remove(finishedTask);
+            }
 
             Juice oj = BreakfastAsync.PourOJ();
             Console.WriteLine("oj is ready");
-
-            Egg eggs = await eggsTask;
-            Console.WriteLine("eggs are ready");
-
-            Bacon bacon = await baconTask;
-            Console.WriteLine("bacon is ready");
 
             Console.WriteLine("Breakfast is ready!");
         }

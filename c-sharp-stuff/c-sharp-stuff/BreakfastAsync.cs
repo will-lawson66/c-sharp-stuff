@@ -7,7 +7,7 @@ namespace c_sharp_stuff
 {
     public class BreakfastAsync
     {
-        static async Task<Toast> MakeToastWithButterAndJamAsync(int number)
+        public static async Task<Toast> MakeToastWithButterAndJamAsync(int number)
         {
             var toast = await ToastBreadAsync(number);
             ApplyButter(toast);
