@@ -4,7 +4,7 @@ using System.Text;
 
 namespace c_sharp_stuff
 {
-    public interface IAbstractvirtualinterface
+    public interface IAbstractVirtualInterface
     {
         string I { get; set; }
         string AddItInterface(string x);
@@ -27,7 +27,7 @@ namespace c_sharp_stuff
         }
     }
 
-    public class AbstractVirtualInterfaceObject : AbstractVirtualInterface, IAbstractvirtualinterface
+    public class AbstractVirtualInterfaceObject : AbstractVirtualInterface, IAbstractVirtualInterface
     {
         public string I { get; set; }
 
