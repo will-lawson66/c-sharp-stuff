@@ -7,21 +7,27 @@ namespace c_sharp_stuff
 {
     public class Program
     {
-        //static void Main(string[] args)
-        //{
-        //    // calling by reference (ref & out)
-        //    CallByWhat.Call();
+        static void Main(string[] args)
+        {
+            // calling by reference (ref & out)
+            //CallByWhat.Call();
 
-        //    // fizzbuzz iterative
-        //    //FB.DoIterative(100);
+            // fizzbuzz iterative
+            //FB.DoIterative(100);
 
-        //    // fizzbuzz recursive
-        //    //FB.DoRecursive(1, 1);
+            // fizzbuzz recursive
+            //FB.DoRecursive(1, 1);
 
-        //    AbstractVirtualInterfaceObject work = new AbstractVirtualInterfaceObject();
-        //    work.DoSomething();
-        //}
-        #region SynchronouslyMakeBreakfast 
+            //AbstractVirtualInterfaceObject work = new AbstractVirtualInterfaceObject();
+            //work.DoSomething();
+
+            //Sorting
+            Sort.Do();
+        }
+
+
+        #region SynchronouslyMakeBreakfast
+
         //static void Main(string[] args)
         //{
         //    Coffee cup = Breakfast.PourCoffee();
@@ -42,44 +48,48 @@ namespace c_sharp_stuff
         //    Console.WriteLine("oj is ready");
         //    Console.WriteLine("Breakfast is ready!");
         //}
+
         #endregion
 
         #region AsynchronouslyMakeBreakfast
-        static async Task Main(string[] args)
-        {
-            Coffee cup = BreakfastAsync.PourCoffee();
-            Console.WriteLine("coffee is ready");
 
-            Task<Egg> eggsTask = BreakfastAsync.FryEggsAsync(2);
-            Task<Bacon> baconTask = BreakfastAsync.FryBaconAsync(3);
+        //static async Task Main(string[] args)
+        //{
+        //    Coffee cup = BreakfastAsync.PourCoffee();
+        //    Console.WriteLine("coffee is ready");
 
-            //Task<Toast> toastTask = BreakfastAsync.ToastBreadAsync(2);
-            Task<Toast> toastTask = BreakfastAsync.MakeToastWithButterAndJamAsync(2);
+        //    Task<Egg> eggsTask = BreakfastAsync.FryEggsAsync(2);
+        //    Task<Bacon> baconTask = BreakfastAsync.FryBaconAsync(3);
 
-            var breakfastTasks = new List<Task> { eggsTask, baconTask, toastTask };
-            while (breakfastTasks.Count > 0)
-            {
-                Task finishedTask = await Task.WhenAny(breakfastTasks);
-                if (finishedTask == eggsTask)
-                {
-                    Console.WriteLine("eggs are ready");
-                }
-                else if (finishedTask == baconTask)
-                {
-                    Console.WriteLine("bacon is ready");
-                }
-                else if (finishedTask == toastTask)
-                {
-                    Console.WriteLine("toast is ready");
-                }
-                breakfastTasks.Remove(finishedTask);
-            }
+        //    //Task<Toast> toastTask = BreakfastAsync.ToastBreadAsync(2);
+        //    Task<Toast> toastTask = BreakfastAsync.MakeToastWithButterAndJamAsync(2);
 
-            Juice oj = BreakfastAsync.PourOJ();
-            Console.WriteLine("oj is ready");
+        //    var breakfastTasks = new List<Task> {eggsTask, baconTask, toastTask};
+        //    while (breakfastTasks.Count > 0)
+        //    {
+        //        Task finishedTask = await Task.WhenAny(breakfastTasks);
+        //        if (finishedTask == eggsTask)
+        //        {
+        //            Console.WriteLine("eggs are ready");
+        //        }
+        //        else if (finishedTask == baconTask)
+        //        {
+        //            Console.WriteLine("bacon is ready");
+        //        }
+        //        else if (finishedTask == toastTask)
+        //        {
+        //            Console.WriteLine("toast is ready");
+        //        }
 
-            Console.WriteLine("Breakfast is ready!");
-        }
+        //        breakfastTasks.Remove(finishedTask);
+        //    }
+
+        //    Juice oj = BreakfastAsync.PourOJ();
+        //    Console.WriteLine("oj is ready");
+
+        //    Console.WriteLine("Breakfast is ready!");
+        //}
+
         #endregion
     }
 }
