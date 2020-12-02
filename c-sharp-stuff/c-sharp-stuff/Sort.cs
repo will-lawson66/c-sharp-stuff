@@ -32,13 +32,38 @@ namespace c_sharp_stuff
             //{
             //    Console.WriteLine(data[i]);
             //}
+            
+            //IntArrayGenerate(data, seed);
+
+            //var data = new int[]
+            //{
+            //    3, 6, 1, 9, 7, 5, 4, 2, 5, 8
+            //};
+            //Console.WriteLine("starting array: ");
+            //for (int i = 0; i < data.Length; i++)
+            //{
+            //    Console.Write(data[i] + "");
+            //}
+            //Console.WriteLine("begin quick sort");
+            //QuickSort(data);
+            //Console.WriteLine("\nquick sort:");
+            //for (int i = 0; i < data.Length; i++)
+            //{
+            //    Console.Write(data[i] + "");
+            //}
+
+            Console.WriteLine("begin bubble sort");
             var data = new int[]
             {
                 3, 6, 1, 9, 7, 5, 4, 2, 5, 8
             };
-            //IntArrayGenerate(data, seed);
-            QuickSort(data);
-            Console.WriteLine("\nquick sort:");
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.Write(data[i] + "");
+            }
+            Console.ReadLine();
+            BubbleSort(data);
+            Console.WriteLine("\nbubble sort:");
             for (int i = 0; i < data.Length; i++)
             {
                 Console.Write(data[i] + "");
@@ -65,6 +90,11 @@ namespace c_sharp_stuff
                     if (data[j] > data[j + 1])
                     {
                         Exchange(data, j, j + 1);
+                        for (int t = 0; t < data.Length; t++)
+                        {
+                            Console.Write(data[t] + "");
+                        }
+                        Console.ReadLine();
                     }
                 }
             }
@@ -81,23 +111,27 @@ namespace c_sharp_stuff
             left = inLeft;
             right = inRight;
             pivotPosition = inRight;
-            pivot = data[inRight]; //pivot
-
+            pivot = data[(left + right)/2]; //pivot
+            Console.WriteLine("recurse");
+            Console.WriteLine("Pivot data: " + pivot.ToString());
             
             while (true)
             {
+                
                 while (data[left] < pivot)
                     left++;
                 while (pivot < data[right])
                     right--;
                 if (left <= right)
                 {
-                    Console.WriteLine();
                     Exchange(data, left, right);
+
+                    Console.WriteLine("exchange: ");
                     for (int i = 0; i < data.Length; i++)
                     {
                         Console.Write(data[i] + "");
                     }
+                    Console.ReadLine();
                     left++;
                     right--;
                 }
