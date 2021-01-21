@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace c_sharp_stuff
+namespace AsynchronyAndMultiThreading
 {
     public class BreakfastSync
     {
