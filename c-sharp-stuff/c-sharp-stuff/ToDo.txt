@@ -1,0 +1,34 @@
+﻿add some keyword examples:
+	volatile
+	dynamic
+	lock
+
+add some accessor examples
+
+add some collections and data structures
+	IEnumerable
+	Dictionary
+	List
+	KeyValuePair
+	Hashtable
+
+add LINQ expressions to manipulate the collections
+
+Also,
+	queue
+	linked list
+	double linked list
+	tree
+	binary tree
+	graph
+
+delegates
+	Func<>, 
+	Action<>, 
+	Predicate<>
+
+Multi-threading and asynchrony
+
+in-memory cache
+	
+
