@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text;
 
 
 namespace AllAboutEnum
@@ -26,7 +27,9 @@ namespace AllAboutEnum
             }
             catch(Exception ex)
             {
-                throw new ValidationException("Values are not of correct type.", ex);
+                var message = new StringBuilder();
+                message.Append(value.GetType().ToString() + " data is invalid.");
+                throw new ValidationException(message.ToString(), ex);
             }
 
             return true;

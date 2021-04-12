@@ -95,14 +95,14 @@ namespace AllAboutEnum
             //Console.ReadLine();
             //#endregion
 
-            //#region 4. GetNames Method
+            #region 4. GetNames Method
             //Console.WriteLine("The members of the SomeEnumeratedConjunctions enum are:");
             //foreach (string s in Enum.GetNames(typeof(SomeEnumeratedConjunctions)))
             //    Console.WriteLine(s);
             //Console.ReadLine();
-            //#endregion
+            #endregion
 
-            //#region 5. TryParse and IsDefined methods
+            #region 5. TryParse and IsDefined methods
             //string[] partsOfSpeech = { "this", "theOther", "and", "but", "he", "or, so" };
             //foreach (string pOS in partsOfSpeech)
             //{
@@ -130,19 +130,29 @@ namespace AllAboutEnum
             //        Console.WriteLine("{0} is not a member of the conjunctions enumeration.", pOS);
             //    }
             //}
-            //#endregion
+            #endregion
 
             #region 6. Custom validation
 
-            var tryValidation = new AllTheEnums
-            {
-                Pronouns = new[] {SomeEnumeratedPronouns.This, SomeEnumeratedPronouns.That},
-                Conjunctions = new[]
-                    {SomeEnumeratedConjunctions.And, SomeEnumeratedConjunctions.Nor, SomeEnumeratedConjunctions.Yet}
-            };
-            ValidationUtility.ValidateDomainModel(tryValidation);
+            //var tryValidation = new AllTheEnums
+            //{
+            //    Pronouns = new[] {SomeEnumeratedPronouns.This, SomeEnumeratedPronouns.That},
+            //    Conjunctions = new[]
+            //        {SomeEnumeratedConjunctions.And, SomeEnumeratedConjunctions.Nor, SomeEnumeratedConjunctions.Yet}
+            //};
+            //ValidationUtility.ValidateDomainModel(tryValidation);
 
             #endregion
+            
+            //try parse string
+            //var data = $"[1,This,500]";
+            //var output = Utility.ConvertStringToEnumArray<SomeEnumeratedPronouns>(data);
+
+            var toStringArray = new[]
+                {SomeEnumeratedPronouns.This, SomeEnumeratedPronouns.That, SomeEnumeratedPronouns.TheOther};
+
+            var stringArray = Utility.ConvertEnumArrayToString<SomeEnumeratedPronouns>(toStringArray);
+
         }
     }
 }
