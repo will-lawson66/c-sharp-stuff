@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlFlow", "ControlFlow\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronyAndMultiThreading", "AsynchronyAndMultiThreading\AsynchronyAndMultiThreading.csproj", "{E937A2AD-F0FB-4EC5-938F-AA253F582C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAboutEnum", "AllAboutEnum\AllAboutEnum.csproj", "{8525048A-1FB6-4689-971B-F12412B48C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAboutEnum", "AllAboutEnum\AllAboutEnum.csproj", "{8525048A-1FB6-4689-971B-F12412B48C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Reflection.csproj", "{635156EA-19F7-4301-8A07-B3CB031E015D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8525048A-1FB6-4689-971B-F12412B48C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8525048A-1FB6-4689-971B-F12412B48C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8525048A-1FB6-4689-971B-F12412B48C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635156EA-19F7-4301-8A07-B3CB031E015D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635156EA-19F7-4301-8A07-B3CB031E015D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635156EA-19F7-4301-8A07-B3CB031E015D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635156EA-19F7-4301-8A07-B3CB031E015D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
