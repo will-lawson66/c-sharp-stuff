@@ -9,9 +9,6 @@ namespace c_sharp_stuff
     {
         static void Main(string[] args)
         {
-            // calling by reference (ref & out)
-            CallByWhat.Call();
-
             AbstractVirtualInterfaceObject work = new AbstractVirtualInterfaceObject();
             work.DoSomething();
         }

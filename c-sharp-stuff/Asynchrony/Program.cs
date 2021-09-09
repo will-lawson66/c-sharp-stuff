@@ -10,21 +10,21 @@ namespace Asynchrony
 
         //static void Main(string[] args)
         //{
-        //    Coffee cup = Breakfast.PourCoffee();
+        //    Coffee cup = BreakfastSync.PourCoffee();
         //    Console.WriteLine("coffee is ready");
 
-        //    Egg eggs = Breakfast.FryEggs(2);
+        //    Egg eggs = BreakfastSync.FryEggs(2);
         //    Console.WriteLine("eggs are ready");
 
-        //    Bacon bacon = Breakfast.FryBacon(3);
+        //    Bacon bacon = BreakfastSync.FryBacon(3);
         //    Console.WriteLine("bacon is ready");
 
-        //    Toast toast = Breakfast.ToastBread(2);
-        //    Breakfast.ApplyButter(toast);
-        //    Breakfast.ApplyJam(toast);
+        //    Toast toast = BreakfastSync.ToastBread(2);
+        //    BreakfastSync.ApplyButter(toast);
+        //    BreakfastSync.ApplyJam(toast);
         //    Console.WriteLine("toast is ready");
 
-        //    Juice oj = Breakfast.PourOJ();
+        //    Juice oj = BreakfastSync.PourOJ();
         //    Console.WriteLine("oj is ready");
         //    Console.WriteLine("Breakfast is ready!");
         //}
