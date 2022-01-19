@@ -6,4 +6,8 @@
     <RootNamespace>c_sharp_stuff</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RegEx\RegEx.csproj" />
+  </ItemGroup>
+
 </Project>
