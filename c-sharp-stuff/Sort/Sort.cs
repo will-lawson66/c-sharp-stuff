@@ -70,15 +70,10 @@ namespace Sort
             QuickSort(data, 0, data.Length - 1);
         }
 
-        public static void QuickSort(int[] data, int inLeft, int inRight)
+        public static int Partition(int[] data, int left, int right)
         {
-            int left, right, pivotPosition, pivot;
-            left = inLeft;
-            right = inRight;
-            pivotPosition = inRight;
-            pivot = data[(left + right)/2]; //pivot
-            DisplayArray(data, left, right, pivot);
-            
+            Console.WriteLine("Partitioning array");
+            var pivot = data[(left + right) / 2];
             while (true)
             {
                 while (data[left] < pivot)
@@ -107,7 +102,7 @@ namespace Sort
 
                     Console.WriteLine("left++ ");
                     left++;
-                    
+
                     Console.WriteLine("right-- ");
                     right--;
 
@@ -116,31 +111,37 @@ namespace Sort
                 }
                 else
                 {
-                    Console.WriteLine("break");
-                    break;
+                    Console.WriteLine("break and return {0} as new pivot", right);
+                    return right;
                 }
             }
+        }
 
-            if (inLeft < right)
+        public static void QuickSort(int[] data, int left, int right)
+        {
+            // For Recusrion  
+
+            if (left < right)
             {
-                Console.WriteLine("recurse");
-                Console.WriteLine("data: ");
+                int pivot = Partition(data, left, right);
+                Console.WriteLine("New pivot = {0}", pivot);
+                
+                if (pivot > 1)
+                {
+                    Console.WriteLine("Pivot: {0} > 1", pivot);
+                    QuickSort(data, left, pivot - 1);
+                }
+
+                if (pivot + 1 < right)
+                {
+                    Console.WriteLine("Pivot + 1: {0} < right", pivot + 1);
+                        QuickSort(data, pivot + 1, right);
+                }
+                Console.WriteLine("Sorting complete");
                 for (int i = 0; i < data.Length; i++)
                 {
                     Console.Write(data[i] + " ");
                 }
-                QuickSort(data, inLeft, right);
-            }
-
-            if (left > inRight)
-            {
-                Console.WriteLine("recurse");
-                Console.WriteLine("data: ");
-                for (int i = 0; i < data.Length; i++)
-                {
-                    Console.Write(data[i] + " ");
-                }
-                QuickSort(data, left, inRight);
             }
         }
 
