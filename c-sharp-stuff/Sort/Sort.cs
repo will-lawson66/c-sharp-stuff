@@ -13,45 +13,8 @@ namespace Sort
                 data[i] = r.Next();
         }
 
-        public static void Do()
+        public static void DoBubbleSort()
         {
-
-            //var data = new int[10];
-            //var seed = 12;
-            //IntArrayGenerate(data, seed);
-
-            //Console.WriteLine("raw data:");
-            //for (int i = 0; i < data.Length; i++)
-            //{
-            //    Console.WriteLine(data[i]);
-            //}
-
-            //BubbleSort(data);
-            //Console.WriteLine("bubble sort:");
-            //for (int i = 0; i < data.Length; i++)
-            //{
-            //    Console.WriteLine(data[i]);
-            //}
-            
-            //IntArrayGenerate(data, seed);
-
-            //var data = new int[]
-            //{
-            //    3, 6, 1, 9, 7, 5, 4, 2, 5, 8
-            //};
-            //Console.WriteLine("starting array: ");
-            //for (int i = 0; i < data.Length; i++)
-            //{
-            //    Console.Write(data[i] + "");
-            //}
-            //Console.WriteLine("begin quick sort");
-            //QuickSort(data);
-            //Console.WriteLine("\nquick sort:");
-            //for (int i = 0; i < data.Length; i++)
-            //{
-            //    Console.Write(data[i] + "");
-            //}
-
             Console.WriteLine("begin bubble sort");
             var data = new int[]
             {
@@ -66,7 +29,7 @@ namespace Sort
             Console.WriteLine("\nbubble sort:");
             for (int i = 0; i < data.Length; i++)
             {
-                Console.Write(data[i] + "");
+                Console.Write(data[i] + ", ");
             }
 
         }
@@ -92,7 +55,7 @@ namespace Sort
                         Exchange(data, j, j + 1);
                         for (int t = 0; t < data.Length; t++)
                         {
-                            Console.Write(data[t] + "");
+                            Console.Write(data[t] + ", ");
                         }
                         Console.ReadLine();
                     }
@@ -100,8 +63,10 @@ namespace Sort
             }
         }
 
-        public static void QuickSort(int[] data)
+        public static void DoQuickSort()
         {
+            int[] data = new int[]{2, 9, 6, 8, 7, 4, 1, 24, 11, 29, 15, 22, 31, 14, 10, 5};
+            //IntArrayGenerate(data, 7);
             QuickSort(data, 0, data.Length - 1);
         }
 
@@ -112,36 +77,85 @@ namespace Sort
             right = inRight;
             pivotPosition = inRight;
             pivot = data[(left + right)/2]; //pivot
-            Console.WriteLine("recurse");
-            Console.WriteLine("Pivot data: " + pivot.ToString());
+            DisplayArray(data, left, right, pivot);
             
             while (true)
             {
-                
                 while (data[left] < pivot)
-                    left++;
-                while (pivot < data[right])
-                    right--;
-                if (left <= right)
                 {
+                    Console.WriteLine("move left");
+                    left++;
+                    DisplayArray(data, left, right, pivot);
+                }
+
+                while (pivot < data[right])
+                {
+                    Console.WriteLine("move right");
+                    right--;
+                    DisplayArray(data, left, right, pivot);
+                }
+
+
+                if (left < right)
+                {
+                    Console.WriteLine("left < right");
                     Exchange(data, left, right);
 
                     Console.WriteLine("exchange: ");
-                    for (int i = 0; i < data.Length; i++)
-                    {
-                        Console.Write(data[i] + "");
-                    }
-                    Console.ReadLine();
+                    DisplayArray(data, left, right, pivot);
+
+
+                    Console.WriteLine("left++ ");
                     left++;
+                    
+                    Console.WriteLine("right-- ");
                     right--;
+
+                    DisplayArray(data, left, right, pivot);
+
                 }
-                if (left > right)
+                else
+                {
+                    Console.WriteLine("break");
                     break;
+                }
             }
+
             if (inLeft < right)
+            {
+                Console.WriteLine("recurse");
+                Console.WriteLine("data: ");
+                for (int i = 0; i < data.Length; i++)
+                {
+                    Console.Write(data[i] + " ");
+                }
                 QuickSort(data, inLeft, right);
-            if (left < inRight)
+            }
+
+            if (left > inRight)
+            {
+                Console.WriteLine("recurse");
+                Console.WriteLine("data: ");
+                for (int i = 0; i < data.Length; i++)
+                {
+                    Console.Write(data[i] + " ");
+                }
                 QuickSort(data, left, inRight);
+            }
+        }
+
+        public static void DisplayArray(int[] data, int left, int right, int pivot)
+        {
+            Console.WriteLine("data: ");
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.Write(data[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("left: {0} left data: {1}", left, data[left]);
+            Console.WriteLine("right: {0} right data: {1}", right, data[right]);
+            Console.WriteLine("pivot data: {0}", pivot);
+            Console.ReadLine();
         }
     }
 }
