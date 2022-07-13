@@ -119,8 +119,6 @@ namespace Sort
 
         public static void QuickSort(int[] data, int left, int right)
         {
-            // For Recusrion  
-
             if (left < right)
             {
                 int pivot = Partition(data, left, right);
@@ -135,13 +133,13 @@ namespace Sort
                 if (pivot + 1 < right)
                 {
                     Console.WriteLine("Pivot + 1: {0} < right", pivot + 1);
-                        QuickSort(data, pivot + 1, right);
+                    QuickSort(data, pivot + 1, right);
                 }
-                Console.WriteLine("Sorting complete");
-                for (int i = 0; i < data.Length; i++)
-                {
-                    Console.Write(data[i] + " ");
-                }
+            }
+            Console.WriteLine("Sorting complete");
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.Write(data[i] + " ");
             }
         }
 

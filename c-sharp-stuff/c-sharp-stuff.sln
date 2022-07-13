@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchrony", "Asynchrony\As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariablesAndParameters", "VariablesAndParameters\VariablesAndParameters.csproj", "{064696EA-BFFC-4D55-84A4-93E2A3891553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegEx", "RegEx\RegEx.csproj", "{F91F45D5-5ED3-4437-922E-BF2F6E565EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegEx", "RegEx\RegEx.csproj", "{F91F45D5-5ED3-4437-922E-BF2F6E565EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{644C6F34-C028-45C9-A4B1-FDB436A4E19D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{644C6F34-C028-45C9-A4B1-FDB436A4E19D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{B9B6B89C-A95B-464D-AB33-54DB85840589}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{644C6F34-C028-45C9-A4B1-FDB436A4E19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644C6F34-C028-45C9-A4B1-FDB436A4E19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644C6F34-C028-45C9-A4B1-FDB436A4E19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
