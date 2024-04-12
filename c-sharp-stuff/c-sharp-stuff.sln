@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30611.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "c-sharp-stuff", "c-sharp-stuff\c-sharp-stuff.csproj", "{25E3CCAB-0FB8-44F3-901E-D457E70DBEEF}"
 EndProject
@@ -23,7 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegEx", "RegEx\RegEx.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{644C6F34-C028-45C9-A4B1-FDB436A4E19D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{B9B6B89C-A95B-464D-AB33-54DB85840589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{B9B6B89C-A95B-464D-AB33-54DB85840589}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{610DFBB6-3446-48B1-B354-413B66D320C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{536D408A-762C-44D7-AE8B-7368F1C137B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9B6B89C-A95B-464D-AB33-54DB85840589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610DFBB6-3446-48B1-B354-413B66D320C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610DFBB6-3446-48B1-B354-413B66D320C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610DFBB6-3446-48B1-B354-413B66D320C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610DFBB6-3446-48B1-B354-413B66D320C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
