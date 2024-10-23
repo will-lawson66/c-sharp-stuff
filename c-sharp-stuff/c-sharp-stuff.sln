@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Al
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{610DFBB6-3446-48B1-B354-413B66D320C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{EB789DB7-10FB-4C45-83EE-BB8BFF2ADCD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{536D408A-762C-44D7-AE8B-7368F1C137B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{536D408A-762C-44D7-AE8B-7368F1C137B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{3FB36FB4-C8E2-4813-BE39-970654501EC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{536D408A-762C-44D7-AE8B-7368F1C137B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB36FB4-C8E2-4813-BE39-970654501EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB36FB4-C8E2-4813-BE39-970654501EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB36FB4-C8E2-4813-BE39-970654501EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB36FB4-C8E2-4813-BE39-970654501EC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
