@@ -42,34 +42,56 @@ namespace ExceptionHandling
             Console.WriteLine("Start first exception trace.");
             try
             {
+                //ExceptionHandling.ThrowCustomException(); // no more code will run
+
                 try
                 {
-                    ExceptionHandling.ThrowCustomException();
-                    ExceptionHandling.ThrowBaseException(); // code will never get here
-                    ExceptionHandling.ThrowCustomException(); 
+                    try
+                    {
+                        ExceptionHandling.ThrowCustomException();
+                        ExceptionHandling.ThrowBaseException(); // code will never get here
+                        ExceptionHandling.ThrowCustomException();
+                    }
+                    catch (CustomException cex)
+                    {
+                        Console.WriteLine($"Caught {cex.GetType()} in CustomException catch block"); // code will continue after final catch
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine($"Caught {exception.GetType()} in Exception inner catch block");
+                        Console.WriteLine("throwing base Exception");
+                        throw;
+                    }
+
+                    try
+                    {
+                        ExceptionHandling.ThrowCustomInnerException();
+                        ExceptionHandling.ThrowCustomException(); // code will never get here
+
+                    }
+                    catch (CustomException cex)
+                    {
+                        Console.WriteLine($"Caught {cex.GetType()} in CustomException catch block");
+                        throw;
+                    }
+
+
                 }
                 catch (CustomException cex)
                 {
                     Console.WriteLine($"Caught {cex.GetType()} in CustomException catch block");
+                    throw;
                 }
                 catch (Exception exception)
                 {
                     Console.WriteLine($"Caught {exception.GetType()} in Exception inner catch block");
-                    Console.WriteLine("throwing base Exception");
-                    throw;
                 }
-
-                ExceptionHandling.ThrowCustomException();
-                ExceptionHandling.ThrowCustomInnerException(); // code will never get here
-            }
-            catch (CustomException cex)
-            {
-                Console.WriteLine($"Caught {cex.GetType()} in CustomException catch block");
             }
             catch (Exception exception)
             {
                 Console.WriteLine($"Caught {exception.GetType()} in Exception inner catch block");
             }
+            
 
             Console.WriteLine("End of all catch blocks.");
         }
