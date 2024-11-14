@@ -20,7 +20,6 @@ namespace Reflection
             if(propInfoBool != null) 
                 settingBool = propInfoBool.GetValue(mirror);
             
-            
             var settingString = new object();
             if (propInfoString != null)
                 settingString = propInfoString.GetValue(mirror);
