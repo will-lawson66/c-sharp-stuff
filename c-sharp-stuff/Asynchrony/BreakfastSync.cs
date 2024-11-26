@@ -24,7 +24,7 @@ namespace Asynchrony
                 Console.WriteLine("Putting a slice of bread in the toaster");
             }
             Console.WriteLine("Start toasting...");
-            Task.Delay(3000).Wait();
+            Task.Delay(3000)?.Wait();
             Console.WriteLine("Remove toast from toaster");
 
             return new Toast();
