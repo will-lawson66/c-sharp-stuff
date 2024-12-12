@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAboutEnum", "AllAboutEnu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection", "Reflection\Reflection.csproj", "{635156EA-19F7-4301-8A07-B3CB031E015D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchrony", "Asynchrony\Asynchrony.csproj", "{F3015050-F393-4E99-80CD-809A04E2A852}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariablesAndParameters", "VariablesAndParameters\VariablesAndParameters.csproj", "{064696EA-BFFC-4D55-84A4-93E2A3891553}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegEx", "RegEx\RegEx.csproj", "{F91F45D5-5ED3-4437-922E-BF2F6E565EC7}"
@@ -57,10 +55,6 @@ Global
 		{635156EA-19F7-4301-8A07-B3CB031E015D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{635156EA-19F7-4301-8A07-B3CB031E015D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{635156EA-19F7-4301-8A07-B3CB031E015D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3015050-F393-4E99-80CD-809A04E2A852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3015050-F393-4E99-80CD-809A04E2A852}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3015050-F393-4E99-80CD-809A04E2A852}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3015050-F393-4E99-80CD-809A04E2A852}.Release|Any CPU.Build.0 = Release|Any CPU
 		{064696EA-BFFC-4D55-84A4-93E2A3891553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{064696EA-BFFC-4D55-84A4-93E2A3891553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{064696EA-BFFC-4D55-84A4-93E2A3891553}.Release|Any CPU.ActiveCfg = Release|Any CPU
